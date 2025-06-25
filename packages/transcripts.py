@@ -13,7 +13,7 @@ def transcribe_with_timestamps(audio_path):
     recognized text and word-level timestamps.
     """
     speech_config = speechsdk.SpeechConfig(subscription=speech_key, endpoint=endpoint)
-    speech_config.speech_recognition_language = "hi-IN"  # "hi-IN" for hindi and "pa-IN" for punjabi
+    speech_config.speech_recognition_language = "pa-IN"  # "hi-IN" for hindi and "pa-IN" for punjabi
     speech_config.request_word_level_timestamps()
     speech_config.output_format = speechsdk.OutputFormat.Detailed
 

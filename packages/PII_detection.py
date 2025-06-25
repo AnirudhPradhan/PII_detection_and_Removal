@@ -15,7 +15,7 @@ def authenticate_client():
     return text_analytics_client
 
 def pii_recognition_example(client, documents):
-    response = client.recognize_pii_entities(documents, language="hi")  # hi for hindi and pa for punjabi
+    response = client.recognize_pii_entities(documents, language="pa")  # hi for hindi and pa for punjabi
     result = [doc for doc in response if not doc.is_error]
     return result
 
